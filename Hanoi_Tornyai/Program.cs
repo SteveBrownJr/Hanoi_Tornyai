@@ -7,7 +7,15 @@ namespace Hanoi_Tornyai
     {
         public static void Main(string[] args)
         {
-            HanoiProject test = new HanoiProject(new int[] {3,2,1 });
+            Console.WriteLine("Hány korongot szeretnél mozgatni?");
+            int N = int.Parse(Console.ReadLine());
+            int[] korongok = new int[N];
+            for (int i = 0; i < N; i++)
+            {
+                korongok[i] = i + 1;
+            }
+            Console.Clear();
+            HanoiProject test = new HanoiProject(korongok);
             test.Átmozgat();
             Console.ReadKey();
         }
